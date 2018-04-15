@@ -4,6 +4,10 @@ import viz
 import vizshape
 vizshape.addAxes()
 
+viz.setMultiSample(4)
+env = viz.addEnvironmentMap('sky.jpg')
+viz.clearcolor(viz.SKYBLUE)
+
 viz.go()
 
 karnark = viz.addChild('KarnakFBX.fbx')
