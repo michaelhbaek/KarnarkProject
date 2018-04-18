@@ -16,7 +16,7 @@ karnak = viz.addChild('KarnakFBX.fbx')
 viz.setMultiSample(4)
 viz.go()
 vizshape.addAxes()
-info = vizinfo.InfoPanel("Let's get started")
+info = vizinfo.InfoPanel("Let get started")
 
 
 
@@ -25,11 +25,6 @@ sensorAvatar1 = vizproximity.Sensor(vizproximity.Box([3170,160,3051],center=[312
 sensorAvatar2 = vizproximity.Sensor(vizproximity.Box([749,741,1439],center=[11489.54081, 447.63779, -2581.69801]), source=karnak)
 sensorAvatar3 = vizproximity.Sensor(vizproximity.Box([1400,422,1400],center=[3854.15869, 375.59055, -1661.75696]), source=karnak)
 sensorAvatar4 = vizproximity.Sensor(vizproximity.Box([8555,811,6949],center=[6046.80322, 334.64569, 189.79089]), source=karnak)
-firstPylonSensor = vizproximity.Sensor(vizproximity.Box([8555,811,6949],center=[6046.80322, 334.64569, 189.79089]), source=karnak)
-#[-3107.70850, 1130.22156, 4795.99219]
-#secondPylonSensor: [181.26595, 1118.89758, 3177.29199]
-#third: [2536.80151, 1118.66260, 1955.30249]
-#fourth: [3540.21777, 501.35898, 1503.57483]
 
 
 target = vizproximity.Target(viz.MainView)
@@ -60,7 +55,7 @@ def EnterProximity(e):
 						'On the outside northern facade of this building we find several interesting scenes. Here, the king is purified by a double stream made up of the ankh and the was (Life and Power) that falls\nin a dome around him. His two open hands show the palm of one and the back side of the other. Two falcons cross their wings over the kings chest under his three-row user necklace.\nAs is the Nubian style, the musculature of the kings legs is prominent. Here, the cartouche of Taharqa has been etched out and replaced by that of Psamtik II.')
 	elif e.sensor == sensorAvatar4:
 		print "we made it to Amun!"
-		info.setText('The main temple of Amun-Re had two axes, one that went north/south and the other that extended east/west. The southern axis continued towards the temple of Luxor and was connected by an avenue of ram-headed sphinxes.')
+		info.setText('The main temple of Amun-Re had two axes—one that went north/south and the other that extended east/west. The southern axis continued towards the temple of Luxor and was connected by an avenue of ram-headed sphinxes.')
 		
 def LeaveProximity(e):
 	"""@args vizproximity.ProximityEvent()"""
